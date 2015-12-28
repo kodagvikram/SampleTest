@@ -20,12 +20,8 @@ import android.widget.ImageView;
 	  super.onCreate(savedInstanceState);
 	  setContentView(R.layout.activity_main);
 	  try {
-		
-	
 	  ImageView capturedImageView = (ImageView)findViewById(R.id.VideoImageview);
-
 	  MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
-
 	  mediaMetadataRetriever.setDataSource(uri);
 	  Bitmap bmFrame = mediaMetadataRetriever.getFrameAtTime(5000000); //unit in microsecond
 	  capturedImageView.setImageBitmap(bmFrame);
